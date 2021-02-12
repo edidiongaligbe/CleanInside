@@ -12,7 +12,11 @@ class QuantityViewModel: ViewModel() {
         _numOfCups.value = 0
     }
 
-    private fun increaseQuantity(){
+    fun increaseQuantity(){
         _numOfCups.value = (_numOfCups.value)?.plus(1)
+    }
+
+    fun decreaseQuantity(){
+        _numOfCups.value =(_numOfCups.value)?.minus(1)
     }
 }
