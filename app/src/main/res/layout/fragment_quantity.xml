@@ -6,12 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".screens.QuantityFragment">
 
-   <!-- <data>
 
-        <variable
-            name="gameViewModel"
-            type="com.example.android.guesstheword.screens.game.GameViewModel" />
-    </data>-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/quantity_layout"
