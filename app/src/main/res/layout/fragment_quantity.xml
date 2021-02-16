@@ -5,7 +5,6 @@
     tools:context=".screens.QuantityFragment">
 
     <data>
-
         <variable
             name="quantity"
             type="com.example.cleaninside.screens.QuantityViewModel" />
@@ -14,8 +13,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/quantity_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".screens.QuantityFragment">
+        android:layout_height="match_parent">
 
         <Button
             android:id="@+id/btnAdd"
@@ -39,16 +37,16 @@
             android:id="@+id/btnRemove"
             android:layout_width="87dp"
             android:layout_height="84dp"
-            android:background="#FAFAFA"
+            android:background="#00FAFAFA"
             android:fontFamily="serif-monospace"
             android:lineSpacingExtra="8sp"
+            android:onClick="@{ () -> quantity.increaseQuantity()}"
             android:padding="0px"
             android:text="+"
             android:textAppearance="@style/TextAppearance.AppCompat.Display3"
             android:textColor="#3F79A6"
             android:textSize="100sp"
             android:textStyle="bold"
-            android:onClick="@{ () -> quantity.increaseQuantity()}"
             app:layout_constraintBottom_toTopOf="@id/guideline"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -92,7 +90,7 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{quantity.numOfCups}"
+            android:text="@{quantity.numOfCups.toString()}"
             android:textColor="#3F79A6"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -118,5 +116,4 @@
             app:layout_constraintVertical_bias="0.504" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </layout>

@@ -17,6 +17,8 @@ class QuantityViewModel: ViewModel() {
     }
 
     fun decreaseQuantity(){
+        if (_numOfCups.value == 0) return
+
         _numOfCups.value =(_numOfCups.value)?.minus(1)
     }
 }
