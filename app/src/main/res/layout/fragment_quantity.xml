@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".screens.QuantityFragment">
 
-    <data>
+    <data>+
         <variable
             name="quantity"
             type="com.example.cleaninside.screens.QuantityViewModel" />
@@ -17,16 +17,16 @@
 
         <Button
             android:id="@+id/btnAdd"
-            android:layout_width="92dp"
-            android:layout_height="81dp"
+            android:layout_width="81dp"
+            android:layout_height="69dp"
             android:background="#00FCFDFF"
             android:fontFamily="serif-monospace"
+            android:onClick="@{ () -> quantity.decreaseQuantity()}"
             android:text="-"
             android:textAppearance="@style/TextAppearance.AppCompat.Display3"
             android:textColor="#3F79A6"
             android:textSize="100sp"
             android:textStyle="bold"
-            android:onClick="@{ () -> quantity.decreaseQuantity()}"
             app:layout_constraintBottom_toTopOf="@id/guideline"
             app:layout_constraintEnd_toStartOf="@+id/imgGlass"
             app:layout_constraintHorizontal_bias="0.5"
@@ -35,8 +35,8 @@
 
         <Button
             android:id="@+id/btnRemove"
-            android:layout_width="87dp"
-            android:layout_height="84dp"
+            android:layout_width="80dp"
+            android:layout_height="77dp"
             android:background="#00FAFAFA"
             android:fontFamily="serif-monospace"
             android:lineSpacingExtra="8sp"
@@ -55,8 +55,8 @@
 
         <ImageView
             android:id="@+id/imgGlass"
-            android:layout_width="166dp"
-            android:layout_height="218dp"
+            android:layout_width="152dp"
+            android:layout_height="198dp"
             android:src="@drawable/transparent_water_glass"
             app:layout_constraintBottom_toTopOf="@id/guideline"
             app:layout_constraintEnd_toStartOf="@+id/btnRemove"
